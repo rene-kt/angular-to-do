@@ -14,7 +14,7 @@ export class AppComponent {
 
   constructor(){
     this.todos.push(new Todo('Estudar', false, 1));
-    this.todos.push(new Todo('Trabalhar', false, 2));
+    this.todos.push(new Todo('Trabalhar', true, 2));
     this.todos.push(new Todo('Lavar os pratos', false, 3));
   }
 }
