@@ -30,9 +30,19 @@ export class AppComponent {
       ])]
 
     })
-    this.todos.push(new Todo('Estudar', false, 1));
-    this.todos.push(new Todo('Trabalhar', true, 2));
-    this.todos.push(new Todo('Lavar os pratos', false, 3));
+
+  }
+
+  add(){
+    const title = this.form.controls['title'].value;
+    const id = this.todos.length + 1;
+
+    this.todos.push(new Todo(title, false, id));
+    this.clear();
+  }
+
+  clear(){
+    this.form.reset();
   }
 
   remove(todo: Todo){
