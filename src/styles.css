@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #131313;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+div {
+    width: 80%;
+    height: 70%;
+    background: #fff;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
