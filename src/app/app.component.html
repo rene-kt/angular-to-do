@@ -11,16 +11,17 @@
 
 <form [formGroup]="form" *ngIf="mode == 'add'">
 
-    <fieldset>
 
-        <label>
-            Task
-        </label>
-        <input type="text" placeholder="Task's title" maxlength="60" formControlName="title">
-        <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine">Esse campo deve conter entre 3 e 60 caracteres</small>
-        <button [disabled]="form.invalid" (click)="add()" class="button">Save</button>
-    </fieldset>
+    <h2 class="text-center">
+        Task
+    </h2>
+    <input type="text" placeholder="Task's title" maxlength="60" formControlName="title">
+    <br>
+    <br>
+    <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine" class="danger">Esse campo deve conter entre 3 e 60 caracteres</small>
+    <br>
+    <button [disabled]="form.invalid" (click)="add()" class="button">Save</button>
+
 </form>
-
 <button class="button add-button" *ngIf="mode == 'list'" (click)="changeMode('add')"> <i class="fas fa-plus-circle"></i>Add</button>
 <button class="button add-button" *ngIf="mode == 'add'" (click)="changeMode('list')"> <i class="fas fa-times"></i>Cancel</button>

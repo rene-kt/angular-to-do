@@ -73,6 +73,7 @@ export class AppComponent {
     const data = JSON.stringify(this.todos);
 
     localStorage.setItem('todos', data);
+    this.mode = 'list';
   }
 
   read(): void{
