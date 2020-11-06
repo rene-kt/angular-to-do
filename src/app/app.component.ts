@@ -29,7 +29,8 @@ export class AppComponent {
 
       ])]
 
-    })
+    });
+    this.read();
 
   }
 
@@ -52,18 +53,30 @@ export class AppComponent {
       this.todos.splice(index, 1);
 
     }
+    this.save();
+
   }
 
   markAsDone(todo: Todo): void{
     todo.done = true;
+    this.save();
+
   }
   markAsUndone(todo: Todo): void{
     todo.done = false;
+    this.save();
+
   }
 
   save(): void{
     const data = JSON.stringify(this.todos);
 
     localStorage.setItem('todos', data);
+  }
+
+  read(): void{
+    const data = localStorage.getItem('todos');
+    this.todos = JSON.parse(data);
+
   }
 }
