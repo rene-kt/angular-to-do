@@ -33,19 +33,20 @@ export class AppComponent {
 
   }
 
-  add(){
+  add(): void{
     const title = this.form.controls['title'].value;
     const id = this.todos.length + 1;
 
     this.todos.push(new Todo(title, false, id));
+    this.save();
     this.clear();
   }
 
-  clear(){
+  clear(): void{
     this.form.reset();
   }
 
-  remove(todo: Todo){
+  remove(todo: Todo): void{
     const index = this.todos.indexOf(todo);
     if(index !== -1 ){
       this.todos.splice(index, 1);
@@ -53,10 +54,16 @@ export class AppComponent {
     }
   }
 
-  markAsDone(todo: Todo){
+  markAsDone(todo: Todo): void{
     todo.done = true;
   }
-  markAsUndone(todo: Todo){
+  markAsUndone(todo: Todo): void{
     todo.done = false;
+  }
+
+  save(): void{
+    const data = JSON.stringify(this.todos);
+
+    localStorage.setItem('todos', data);
   }
 }
