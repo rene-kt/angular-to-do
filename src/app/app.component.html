@@ -3,9 +3,9 @@
 <ul *ngIf="mode == 'list'">
     <p *ngIf="todos.length == 0 "><small>Você ainda não tem nenhuma tarefa hoje.</small></p>
     <li *ngFor="let todo of todos">{{todo.title}}
-        <button *ngIf="!todo.done" (click)="markAsDone(todo)">Done</button>
-        <button *ngIf="todo.done" (click)="markAsUndone(todo)">Undone</button>
-        <button (click)="remove(todo)" class="delete">Delete</button></li>
+        <button *ngIf="!todo.done" (click)="markAsDone(todo)"><i class="far fa-check-circle"></i></button>
+        <button *ngIf="todo.done" (click)="markAsUndone(todo)"><i class="fas fa-check-circle"></i></button>
+        <button (click)="remove(todo)" class="delete"><i class="far fa-trash-alt"></i></button></li>
 
 </ul>
 
@@ -20,7 +20,7 @@
     <br>
     <small *ngIf="form.controls.title.invalid && !form.controls.title.pristine" class="danger">Esse campo deve conter entre 3 e 60 caracteres</small>
     <br>
-    <button [disabled]="form.invalid" (click)="add()" class="button">Save</button>
+    <button [disabled]="form.invalid" (click)="add()" class="button"><i class="fas fa-save"></i>Save</button>
 
 </form>
 <button class="button add-button" *ngIf="mode == 'list'" (click)="changeMode('add')"> <i class="fas fa-plus-circle"></i>Add</button>

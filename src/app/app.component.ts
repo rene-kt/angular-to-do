@@ -18,6 +18,7 @@ export class AppComponent {
   public mode = 'list';
   constructor(private fb: FormBuilder){
 
+    this.read();
 
     this.form = this.fb.group({
 
@@ -31,7 +32,6 @@ export class AppComponent {
       ])]
 
     });
-    this.read();
 
   }
 
@@ -79,10 +79,8 @@ export class AppComponent {
   read(): void{
     const data = localStorage.getItem('todos');
 
-    if(data){
-      this.todos = JSON.parse(data);
-    }
-    this.todos = [];
+    this.todos = JSON.parse(data);
+    
 
   }
 
