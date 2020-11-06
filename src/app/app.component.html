@@ -16,8 +16,8 @@
         <label>
             Task
         </label>
-
         <input type="text" placeholder="Task's title" maxlength="60" formControlName="title">
+        <small *ngIf="form.controls.title.invalid && form.controls.title.pristine">Esse campo deve conter entre 3 e 60 caracteres</small>
         <button>Save</button>
     </fieldset>
 
