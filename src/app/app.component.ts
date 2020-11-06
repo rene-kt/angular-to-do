@@ -11,10 +11,11 @@ export class AppComponent {
 
   public todos: Todo[] = []; 
 
-  public title: String = "To Do List";
+  public title = "To Do List";
 
   public form: FormGroup;
 
+  public mode = 'list';
   constructor(private fb: FormBuilder){
 
 
@@ -82,5 +83,9 @@ export class AppComponent {
     }
     this.todos = [];
 
+  }
+
+  changeMode(mode: string): void{
+    this.mode = mode;
   }
 }

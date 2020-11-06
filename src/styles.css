@@ -65,5 +65,10 @@
                     padding-left: 50px;
                     padding-right: 50px;
                     font-weight: 500;
-                    font-size: 1em;
+                    font-size: 1 em;
+                }
+                
+                i {
+                    color: #fff;
+                    margin-right: 10px;
                 }
