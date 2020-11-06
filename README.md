@@ -1,27 +1,35 @@
-# Todo
+# Angular To-Do
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+This project was made with Angular, it's a simple CRUD, but w/o database, just using localStorage to persist the data.
 
-## Development server
+## Screenshots
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![home](https://user-images.githubusercontent.com/49681380/98375663-2d3e4f80-2021-11eb-8557-f32724fb9683.JPG)
+<br>
+![input](https://user-images.githubusercontent.com/49681380/98375713-421ae300-2021-11eb-9c3e-942930907e65.JPG)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## How to use 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To clone and run this application by yourself, make sure you have NodeJS, Git and a terminal (doesn't matter which), just to run the commands. After that, do the following instructions: 
 
-## Running unit tests
+```bash
+# Clone this repository
+$ git clone https://github.com/reness0/angular-to-do
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Go into the repository
+$ cd angular-to-do
+```
+# Install dependencies
+```
+$ npm i
+```
 
-## Running end-to-end tests
+# Run the app
+```
+$ ng serve -o
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Now, all you need to do, is access on your browser: http://localhost:4200
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
